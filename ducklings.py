@@ -2,7 +2,9 @@
 Duckling Screensaver, by Al Sweigart al@inventwithpython.com
 A screensaver of many ducklings.
 
-
+ (^^=     ("=     >" )     >")
+(^  )    (< )    (  >)     ( v)
+ ^ ^      ^^      ^ ^       ^^ 
 
 View this code at _____
 Tags: large, artistic, object-oriented, scrolling
@@ -11,8 +13,8 @@ Tags: large, artistic, object-oriented, scrolling
 import random, shutil, sys, time
 
 # Set up the constants
-PAUSE = 0.2
-DENSITY = 0.10
+PAUSE = 0.15
+DENSITY = 0.01
 
 DUCKLING_WIDTH = 5
 LEFT = 'left'
@@ -48,7 +50,7 @@ def main():
 
   while True: 
     for laneNum, ducklingObj in enumerate(ducklingLanes):
-      if (ducklingObj == None and random.random() <= DENSITY:
+      if (ducklingObj == None and random.random() <= DENSITY):
         # Place a duckling in this land:
         ducklingObj = Duckling()
         ducklingLanes[laneNum] = ducklingObj
@@ -82,7 +84,7 @@ class Duckling:
     else:
       self.eyes = random.choice([BEADY, WIDE, HAPPY, ALOOF])
 
-    self.partToDisplayNext() = HEAD
+    self.partToDisplayNext = HEAD
 
   def getHeadStr(self):
     """Returns the string of the duckling's head."""
@@ -141,7 +143,7 @@ class Duckling:
     """Returns the string of the duckling's body."""
     bodyStr = '(' # Get the left side of the body.
 
-    if self.direction = LEFT:
+    if self.direction == LEFT:
       # Get the interior body space:
       if self.body == CHUBBY:
         bodyStr += ' '
@@ -156,7 +158,7 @@ class Duckling:
       elif self.wing == DOWN:
         bodyStr += 'v'
 
-    if self.direction = RIGHT:
+    if self.direction == RIGHT:
       # Get the wing:
       if self.wing == OUT:
         bodyStr += '<'
@@ -196,7 +198,7 @@ class Duckling:
     elif self.partToDisplayNext == BODY:
       self.partToDisplayNext = FEET
       return self.getBodyStr()
-    elif self.partToDisplayNext = FEET:
+    elif self.partToDisplayNext == FEET:
       self.partToDisplayNext = None
       return self.getFeetStr()
 
@@ -205,4 +207,4 @@ if __name__ == '__main__':
   try:
     main()
   except KeyboardInterrupt:
-    sys.exit() # When Ctrl-C is pressed, end the program.
+    sys.exit() # When Ctrl-C is pressed, end the program
