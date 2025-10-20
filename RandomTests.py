@@ -13,12 +13,13 @@ def capitalize():
     addBuffer()
 
 def bathroomBreak():
-    breakOptions = ['Pee', 'Poop']
+    breakOptions = ['Peed', 'Pooped']
     chosenOption = random.choice(breakOptions)
 
     addBuffer()
-    print(f'Excuse me, I think you need to take a bathroom break to go {chosenOption.lower()}.')
+    print(AHHHHHHHHHHHHHHHHHH! I  {chosenOption.lower(} in my pants!!!!!.')
+
     addBuffer()
 
 if __name__ == '__main__':
-    capitalize()
+    bathroomBreak()

@@ -56,5 +56,5 @@ while True: # main game loop
 
     time.sleep(0.5)
 
-    print('Ughhh! You win... this time at least.')
-    wins = wins + 1 # Could also write 'wins += 1'
+    print('You win!')
+    wins = wins + 1 # Could also write 'wins += 1
